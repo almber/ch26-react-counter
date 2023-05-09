@@ -1,21 +1,33 @@
-// Props: Comunican los componentes padres con los componentes hijos
-const ParagraphLink = ( propiedades ) => { // { clave:valor, href: "" }
+// Importat hoja de estilo
+import '../../styles/paragraphLink/paragraph-link.css';
+import PropTypes from 'prop-types';
 
-      console.log( propiedades );
+
+// Props: Comunican los componentes padres con los componentes hijos
+const ParagraphLink = ( {href, color="pink", children} ) => { // { clave:valor, href: "" }
+      //console.log( props );
 
   const myParagraph = (
     <>
       <a 
-      style = { { textDecoration: 'none', color: propiedades.color } } 
-      href= { propiedades.href }
+      className="color-anchor"
+      style={{color:color}}
+     id="anchor-paragraph"
+      href= { href }
       target= '_blank'
       >
-        <p> { propiedades.children } </p>
+        <p className='content'> { children } </p>
       </a>
     </>
   );
     return myParagraph;
 };
+
+
+ParagraphLink.propTypes = {
+    href : PropTypes.string.isRequired
+}
+
 
 export default ParagraphLink; // exportación por default.
 /*

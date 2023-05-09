@@ -11,6 +11,8 @@ root.render(
      <P href="http://legacy.reactjs.org/" color= "red" >Página React</P>
      <P href="httpa://youtube.com" color="green" >Página Youtube</P>
      <P href="https://linkedin.com" color="purple" >Página LinkedIn</P>
+     <P href="https://linkedin.com" >Página Generation</P>
+     <P href="#">Página CH26</P>
   </React.StrictMode>
 );
 

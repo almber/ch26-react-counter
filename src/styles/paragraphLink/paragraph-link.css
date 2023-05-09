@@ -1,0 +1,19 @@
+
+.color-anchor {
+    color: blueviolet;
+}
+
+#anchor-paragraph {
+    color: chartreuse;
+}
+
+a {
+    text-decoration: none;
+    color: green;
+}
+
+.content {
+    letter-spacing: 3px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
