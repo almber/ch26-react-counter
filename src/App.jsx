@@ -9,7 +9,8 @@ export const App = () => {
     <>
       <NavBar />
       <SocialNetworks />
-      <Counter />
+      <Counter initialValue={100} increment={10} decrement={10} /> 
+      <Counter initialValue={0} increment={10} /> 
       <Footer />
     </>
   );

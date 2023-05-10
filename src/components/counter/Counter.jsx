@@ -1,20 +1,38 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { Button } from '../button/Button';
 
-export const Counter = () => {
-    let counter = 100;
+export const Counter = ( {initialValue=0, increment=1, decrement=1} ) => {
 
-    const handleIncrement = (event)=>{
-        console.log(event);
-        console.log(++counter);
+    const [counter, setcounter] = useState( initialValue );
+
+    const handleIncrement = (event, message)=>{
+        console.log(event, message);
+        setcounter( counter + increment )
+    }
+
+    const handleDecrement = (event)=>{
+        setcounter( counter - decrement )
+    }
+
+    const handleReset = (event) =>{
+        setcounter( initialValue )
     }
 
   return (
      <>
        <h1>Counter</h1>
        <h2> { counter } </h2>
-       <button onClick={ handleIncrement } >+</button>
-       <button onClick={ (event)=>console.log(event) } >-</button>
-       <button>Reset</button>
+       <Button onClick={ handleIncrement } >+</Button>
+       <Button onClick={ handleDecrement } >-</Button>
+       <Button onClick={ handleReset } >Reset</Button>
      </>
   );
-}
+};
+
+/*
+  Hacer un componente para el botón
+  atributo: increment={5}
+  atributo: increment={-5}
+  atributo: onClick={ fncCallback }
+  Color text: blue;
+*/
