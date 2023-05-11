@@ -1,16 +1,21 @@
-import React from 'react'
+import ButtonMui from "@mui/material/Button";
+import React from "react";
+import SendIcon from '@mui/icons-material/Send';
 
-export const Button = ( {children, setcounter, newValue, style } ) => {
-    
-    /* const handleOnClick = (event)=>{
+
+export const Button = ({ children, setcounter, newValue, style }) => {
+  /* const handleOnClick = (event)=>{
         setcounter( newValue );
     } */
 
   return (
     <>
-    <button style={style} onClick={ ()=> setcounter(newValue) } >
+      <ButtonMui
+        variant="contained"
+        starIcon={<SendIcon />}
+        onClick={() => setcounter(newValue)}>
         {children}
-        </button>
+      </ButtonMui>
     </>
   );
-  };
+};
